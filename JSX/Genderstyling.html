@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .div{
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap:10px;
+        }
+        .box{
+            height: 200px;
+            width: 250px;
+            color: rgb(39, 40, 41);
+        }
+    </style>
+</head>
+<body>
+    <div id="r"></div>
+    <script type="text/babel">
+        var ar=[
+            {
+            Firstname:"Jyothsnavi",
+            Lastname:"Boddu",
+            gender:"female",
+            Age:18
+           },  
+            {
+            Firstname:"Yagnesh",
+            Lastname:"Boddu",
+               gender:"male",
+            Age:16
+           },
+            {
+            Firstname:"Praveena",
+            Lastname:"Gogula",
+               gender:"female",
+            Age:12
+           }
+  
+  
+
+    ]
+   
+        var j=<ul class="div">
+                {
+                    ar.map((a)=>
+                    {
+                            return <li class="box" style={a.gender==="male"?{backgroundColor:"blue"}:{backgroundColor:"pink"}}>
+                               <h4>{"FirstName :"+a.Firstname}</h4>
+                               <h4>{"LastName :"+a.Lastname}</h4>
+                               <h4>{"Age :"+a.Age}</h4>
+                               <h4>{"Age"+a.gender}</h4>
+                                </li>
+
+                    })
+                }
+                </ul>
+        ReactDOM.render(j,document.getElementById("r"))
+
+
+    </script>
+    
+</body>
+</html>

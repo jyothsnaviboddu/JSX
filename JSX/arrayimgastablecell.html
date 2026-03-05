@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        var ar=["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-8Ne4j_5gRNNikzu_KZRIyzSihAQ74KAbiQ&s",
+                "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630",
+                "https://i.pinimg.com/736x/2d/95/e5/2d95e5886fc4c65a6778b5fee94a7d59.jpg"
+        ]
+        var js=<div>
+            <table>
+                <tr>
+            {
+                
+                ar.map((a)=>
+                {
+                    return <td><img src={a} width="200" height="200" /></td>
+                })
+  
+            }
+                 </tr>
+             </table>                 
+            </div>
+            ReactDOM.render(js,document.getElementById("root"))
+
+
+    </script>
+    
+</body>
+</html>

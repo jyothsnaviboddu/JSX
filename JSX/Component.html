@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   
+</head>
+<body>
+    <div id="head"></div>
+    <div id="r"></div>
+    <script type="text/babel">
+        var obj={
+            FirstName:"Jyothsnavi",
+            LastName:"Boddu",
+            Age:17
+        
+        }
+        function Js()
+        {
+            return <div style={{border:"5px solid red",margin:"5px",padding:"10px",color:"black"}}>
+                    <h2>{"FirstName :"+obj.FirstName}</h2>
+                    <h3>{"LastName :"+obj.LastName}</h3>
+                    <h2>{"Age:"+obj.Age}</h2>
+                </div>
+       
+
+        }
+        function Head()
+        {
+            return <div style={{display:"flex",gap:"10px",border:"1px solid black",height:"100px",gap:"700px"}}>
+                        <h1>Welcome to React</h1>
+                        <ul style={{display:"flex",listStyle:"none",gap:"20px"}} >
+                            <li>Home</li>
+                            <li>Services</li>
+                            <li>About</li>
+                            <li>Courses</li>
+                        </ul>    
+                        
+                    </div>
+        }
+        function Foot()
+        {
+            return <div style={{display:"flex",gap:"10px",border:"1px solid black",height:"100px",gap:"700px", position:"fixed"}}>
+                        
+                        <h3>ContactUs</h3>
+                        <h2>EmailUs jyothsnavi@gmail.com</h2>
+
+                        
+                    </div>
+        }
+     
+
+        var x=<div>
+                <Head></Head>
+                <Js></Js>
+                <Foot></Foot>
+            </div>
+        ReactDOM.render(x,document.getElementById("r"))
+            </script>
+    
+</body>
+</html>

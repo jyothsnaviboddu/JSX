@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>webpage</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            .male
+            {
+              
+
+                text-align: center;
+                background-color: rgb(142, 174, 174);
+              
+ 
+            }
+               .female
+            {
+                
+                text-align: center;
+                background-color: rgb(140, 83, 83);
+                
+        
+ 
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            var Cartoons =
+             [
+                    { id: 1, name: "Chhota Bheem", gender: "Male" },
+                    { id: 4, name: "Motu", gender: "Male" },
+                    { id: 2,name: "Patlu", gender: "Male" },
+                    { id: 4, name: "Chutki", gender: "Female" },
+                    { id: 9, name: "Little Singham", gender: "Male" },
+                    { id: 6, name: "Shiva", gender: "Male" },
+                    { id: 7, name: "Kris (Roll No 21)", gender: "Male" },
+                    { id: 8, name: "Suppandi", gender: "Male" },
+                    { id: 5, name: "Mighty Raju", gender: "Male" },
+                    { id: 10, name: "Sally Bollywood", gender: "Female" }
+             ];
+             function UI()
+             {
+                   var Ctable=<table border="2">
+                            <thead>
+                                <tr>
+                                    <th onClick={()=>{sort("id")}}>ID</th>
+                                    <th onClick={()=>{sort("name")}}>Name of the Cartoon</th>
+                                    <th onClick={()=>{sort("gender")}} >gender</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    Cartoons.map((cartoon)=>
+                                    {
+                                       return( <tr className= {cartoon.gender=="Male"?"male":"female"}>
+                                       
+                                            <td>{cartoon.id}</td>
+                                            <td>{cartoon.name}</td>
+                                            <td>{cartoon.gender}</td>
+                                            {cartoon.gender==="Male"&&<td>&#128104;</td>}
+                                            {cartoon.gender==="Female"&&<td>&#128105;</td>}
+                                        
+
+
+                                         </tr> )  
+                                    })
+                                }
+                            </tbody>
+                        </table>
+              ReactDOM.render(Ctable,document.getElementById("root"))  
+             }
+              function sort(k)
+              {
+                console.log(k)
+                    Cartoons.sort((a,b)=>
+                    {
+                        if(a[k]>b[k])
+                        {
+                            return 1
+                        }
+                        else
+                        {
+                            return -1
+                        }
+
+                    })
+                    UI()
+              }    
+              UI()    
+
+        </script>
+    </body>
+</html>

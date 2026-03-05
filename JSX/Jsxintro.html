@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Webapge</title>
+         <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+        
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <div id="root2"></div>
+        <div id="root3"></div>
+        <div id="root4"></div>
+        <div id="root5"></div>
+        <div id="root6"></div>
+         <div id="root7"></div>
+        <script type="text/babel">
+            var  jsx=<h1 style={{color:"violet",fontFamily:"Arial"}}>Hello John</h1>
+            ReactDOM.render(jsx,document.getElementById("root"))
+
+            var  jsx1=<h1 style={{color:"green",fontFamily:"Lucida"}}>Hello Harshitha {10+2+8+15+5}</h1>
+            ReactDOM.render(jsx1,document.getElementById("root2"))
+
+            var k="Yagnesh"
+            var  jsx1=<h1 style={{color:"deeppink",fontFamily:"Lucida"}}>Hello Harshitha {k}</h1>
+            ReactDOM.render(jsx1,document.getElementById("root3"))
+
+          /*  var j=prompt("Enter your message?..")
+            var  jsx1=<h1 style={{color:"deepskyblue",fontFamily:"Lucida"}}>Hello Harshitha {j}</h1>
+            ReactDOM.render(jsx1,document.getElementById("root4"))*/
+
+           var jul=<ul style={{color:"blue",fontSize:"20px",fontFamily:"Arial"}}>
+
+                          <li >Praveena</li>
+                        <li>Jyothsnavi</li>
+                        <li>Yagnesh</li>
+                    </ul>
+            ReactDOM.render(jul,document.getElementById("root5"))
+            var students=["Praveena","Jyothsnavi","Yagnesh","Sweety"]
+            var ul=<ul>
+                    {
+                        students.map((stud)=>{
+                                return <li>{stud}</li>
+                        })
+                    }
+                    </ul>
+            ReactDOM.render(ul,document.getElementById("root6"))  
+            var users = [
+                { id: 1, name: "Alice", active: 'true' },
+             { id: 2, name: "Bob", active: 'false' },
+            { id: 3, name: "Charlie", active: 'true' },
+           
+            ];   
+            var ul2=<ul>
+                    {
+                        users.map((user)=>
+                        {
+                                return <li>
+                                        <h2>Id:{ user.id}</h2>
+                                        <h2>Name:{user.name}</h2>
+                                         <h2>Active:{user.active}</h2>
+                                    </li>
+                        })
+                    }
+                    </ul>  
+            ReactDOM.render(ul2,document.getElementById("root7"))  
+          
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="r"></div>
+    <script type="text/babel">
+        var c=0,f=0
+        function fill(y)
+        {
+            c=y
+            console.log(y)
+            f=y
+            UI()
+        }
+        function UI()
+        {
+            var r=<div>
+                        <b onClick={()=>{fill(1)}}>{f>=1 ? <span>&#9733;</span>:<span>&#9734;</span>}   </b>
+                        <b onClick={()=>{fill(2)}}>{f>=2 ? <span>&#9733;</span>:<span>&#9734;</span>}   </b>
+                        <b onClick={()=>{fill(3)}}>{f>=3 ? <span>&#9733;</span>:<span>&#9734;</span>}</b>
+                        <b onClick={()=>{fill(4)}}>{f>=4 ? <span>&#9733;</span>:<span>&#9734;</span>}   </b>
+                        <b onClick={()=>{fill(5)}}>{f>=5? <span>&#9733;</span>:<span>&#9734;</span>}   </b>
+                        <h1>Rating:{c}/5</h1>
+                    </div>
+            ReactDOM.render(r,document.getElementById("r"))        
+        }
+        UI()
+
+    </script>
+    
+</body>
+</html>

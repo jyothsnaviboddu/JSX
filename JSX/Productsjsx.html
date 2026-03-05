@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Webpage
+        </title>
+         <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+        
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <body>
+    <table border="2" >
+        <thead >
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Active</th>
+                    </tr>
+            </thead>
+            <tbody id="tb">
+                   <tr ></tr> 
+            </tbody>
+    </table>
+    <script type="text/babel">
+         const users = [
+            { id: 1, name: "Alice", active: 'true' },
+            { id: 2, name: "Bob", active: 'false' },
+            { id: 3, name: "Charlie", active: 'true' },
+            { id: 4, name: "Harshitha", active: 'true' }
+            ];
+        var tab=
+            <tbody>
+                {
+                    users.map(function(a){
+                      return  <tr>
+                            <td>{a.id}</td>
+                            <td>{a.name}</td>
+                            <td>{a.active}</td>
+                        </tr>
+                    })
+                }
+            </tbody>
+           
+            ReactDOM.render(tab,document.getElementById('tb'))
+    </script>
+</body>
+</html>
+    </body>
+</html>

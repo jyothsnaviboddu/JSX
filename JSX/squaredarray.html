@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+    <div id="r"></div>
+    <script type="text/babel">
+     /*var n=+prompt("Enter a number")
+    var js=<img src={n%2==0?"https://thumbs.dreamstime.com/b/tiger-wild-winter-nature-amur-tiger-running-snow-action-wildlife-scene-danger-animal-cold-winter-tajga-russ-84783074.jpg":"https://img.freepik.com/free-photo/courage-man-jump-through-gap-hill-business-concept-idea_1323-262.jpg?semt=ais_rp_progressive&w=740&q=80"} />
+     */
+    var ar=[12,3,5,7]
+    var js=<ul>
+                {
+                    ar.map((a)=>{
+                        return <li>{a*a}</li>
+                    })
+                }
+            </ul>
+    ReactDOM.render(js,document.getElementById("r"))
+    </script>
+    
+</body>
+</html>

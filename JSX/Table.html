@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        var ar=[
+            {
+            Firstname:"Jyothsnavi",
+            Lastname:"Boddu",
+            gender:"Female",
+            Age:18
+           },  
+            {
+            Firstname:"Yagnesh",
+            Lastname:"Boddu",
+            gender:"Male",
+            Age:16
+           },
+            {
+            Firstname:"Praveena",
+            Lastname:"Gogula",
+            gender:"Female",
+            Age:12
+           },
+            {
+            Firstname:"Ramanaiah",
+            Lastname:"Gogula",
+            gender:"Male",
+            Age:12
+           }
+  
+  
+
+    ]
+        var js=
+            <table border="3">
+                <thead>
+                    <tr>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                     </tr>
+                     </thead>
+                <tbody>     
+               {
+                    ar.map((a)=>{
+                        return <tr>
+                                    <td>{a.Firstname}</td>
+                                    <td>{a.Lastname}</td>
+                                    <td>{a.Age}</td>
+                                    <td>{a.gender}</td>
+                                    {a.gender==="Male"&&<td>&#129332;</td>}
+                                  {  a.gender==="Female"&&<td>&#128120;</td>}
+                                </tr>
+                    })
+               }
+               </tbody>
+               </table>
+            
+            ReactDOM.render(js,document.getElementById("root"))
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+      <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+      <style>
+            .s{
+                height: 80px;
+                border: 5px solid rgb(236, 97, 97);
+                background-color: rgb(103, 162, 115);
+                color: rgb(212, 99, 82);
+            }
+      </style>
+   
+</head>
+<body>
+    <div class="s">
+        <h1>Welcome to Jyothsna's world</h1>
+    </div>
+    <div id="root"></div>
+    <script type="text/babel">
+        var s=["Jyothsnavi","Yagnesh","Praveena","Varun Tej","Nani"]
+        var js=<ul>
+                {
+                    s.map((a)=>
+                    {
+                         return <li>{a}</li>
+                    })
+                }
+                </ul>
+                ReactDOM.render(js,document.getElementById("root"))
+
+    </script>
+    
+</body>
+</html>

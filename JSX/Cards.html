@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            .group{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            .card{
+                height: 200px;
+                width:200px;
+                background: linear-gradient(rgb(199, 113, 113),rgb(57, 57, 120));
+                color: aliceblue;
+                border-radius: 20px;
+                padding: 20px;
+            }
+        </style>
+
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        var ar=[
+            {
+            Firstname:"Jyothsnavi",
+            Lastname:"Boddu",
+            Age:18
+           },  
+            {
+            Firstname:"Yagnesh",
+            Lastname:"Boddu",
+            Age:16
+           },
+            {
+            Firstname:"Praveena",
+            Lastname:"Gogula",
+            Age:12
+           }
+  
+  
+
+    ]
+        var js=<ul class="group">
+               {
+                    ar.map((a)=>{
+                        return <li class="card">
+                                    <h3>{a.Firstname}</h3>
+                                    <h3>{a.Lastname}</h3>
+                                    <h3>{a.Age}</h3>
+                                </li>
+                    })
+               }
+            </ul>
+            ReactDOM.render(js,document.getElementById("root"))
+
+
+    </script>
+    
+</body>
+</html>

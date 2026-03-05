@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        var ar=[
+            {
+            Firstname:"Jyothsnavi",
+            Lastname:"Boddu",
+            Age:18
+           },  
+            {
+            Firstname:"Yagnesh",
+            Lastname:"Boddu",
+            Age:16
+           },
+            {
+            Firstname:"Praveena",
+            Lastname:"Gogula",
+            Age:12
+           }
+  
+  
+
+    ]
+    function UI()
+    {
+         var js=<table border="2">
+                <thead>
+                    <tr>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Age</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            ar.map((a,i)=>
+                            {
+                                return <tr>
+                                        <td>{a.Firstname}</td>
+                                        <td>{a.Lastname}</td>
+                                        <td>{a.Age}</td>
+                                        <td><button onClick={()=>{deletestud(i)}}>Delete</button></td>
+
+                                    </tr>
+
+                            })
+
+                        }
+                        </tbody>
+                </table>
+        
+        ReactDOM.render(js,document.getElementById("root"))
+
+    }
+     function deletestud(i)
+     {
+        ar.splice(i,1)
+        UI()
+     }
+     UI()
+
+    </script>
+    
+</body>
+</html>

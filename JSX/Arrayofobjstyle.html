@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .box{
+            height: 200px;
+            
+            background: linear-gradient(rgb(206, 81, 102), violet);
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="r"></div>
+    <script type="text/babel">
+        var ar=[
+            {
+            Firstname:"Jyothsnavi",
+            Lastname:"Boddu",
+            Age:18
+           },  
+            {
+            Firstname:"Yagnesh",
+            Lastname:"Boddu",
+            Age:16
+           },
+            {
+            Firstname:"Praveena",
+            Lastname:"Gogula",
+            Age:12
+           }
+  
+  
+
+    ]
+   
+        var j=<ul>
+                {
+                    ar.map((a)=>
+                    {
+                            return <li class="box">
+                               <h4>{"FirstName :"+a.Firstname}</h4>
+                               <h4>{"LastName :"+a.Lastname}</h4>
+                               <h4>{"Age :"+a.Age}</h4>
+                                </li>
+
+                    })
+                }
+                </ul>
+        ReactDOM.render(j,document.getElementById("r"))
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+      var c=[12,45,67,88,90,321]
+      var js=<ul>
+                    {
+                      c.map((a)=>
+                    {
+                        return <li style={a%2==0?{color:"green"}:{color:"red"}}>{a}</li>
+                    })
+                    }
+                    
+              </ul>
+      ReactDOM.render(js,document.getElementById("root"))  
+    </script>
+</body>
+</html>

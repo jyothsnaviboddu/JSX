@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        var s;
+        function abc(a)
+        {
+            console.log(a.target.value)
+            s=a.target.value
+            UI()
+        }
+       
+        function UI()
+        {
+               var js=<div>
+                    <input type="radio" id="sv" onClick={(d)=>{abc(d)}}  name="cnt" value="https://png.pngtree.com/png-clipart/20190520/original/pngtree-business-male-icon-vector-png-image_4187852.jpg" />Male
+                    <br/>
+                     <input type="radio" onClick={(e)=>{abc(e)}} id="s" name="cnt" value="https://thumbs.dreamstime.com/b/female-icon-vector-silhouette-illustration-art-image-female-silhouette-icon-image-female-icon-vector-silhouette-female-icon-vector-338725629.jpg"/>Female
+                     <br/>
+                     
+                    <img src={s} height="100px" width="100px"/>
+                </div>
+               ReactDOM.render(js,document.getElementById("root"))
+
+        }
+        UI()
+     
+    </script>
+    
+</body>
+</html>

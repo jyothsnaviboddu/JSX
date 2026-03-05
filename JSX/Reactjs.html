@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Webpage
+        </title>
+        
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script>
+            console.log(React)
+          /*  var rel=React.createElement("h1",null,"Hello Jyothsnavi")
+            ReactDOM.render(rel,document.getElementById("root"))*/
+            var rel=React.createElement("h1",{style:{color:"white",backgroundColor:"blue",fontSize:"50px"}},"Hello Jyothsnavi")
+            ReactDOM.render(rel,document.getElementById("root"))
+        </script>
+
+    </body>
+</html>

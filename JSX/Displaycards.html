@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .group{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            list-style: none;
+        }
+        .card{
+            background: linear-gradient(rgb(228, 91, 187),rgb(44, 195, 200));
+            color: rgb(238, 228, 243);
+            text-align: center;
+            padding: 20px;
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+        }
+    </style>
+       
+</head>
+<body>
+    
+<div id="root"></div>
+        <script type="text/babel">
+            var Cartoons =
+             [
+                    { id: 1, name: "Chhota Bheem", gender: "Male" },
+                    { id: 4, name: "Motu", gender: "Male" },
+                    { id: 2,name: "Patlu", gender: "Male" },
+                    { id: 4, name: "Chutki", gender: "Female" },
+                    { id: 9, name: "Little Singham", gender: "Male" },
+                    { id: 6, name: "Shiva", gender: "Male" },
+                    { id: 7, name: "Kris (Roll No 21)", gender: "Male" },
+                    { id: 8, name: "Suppandi", gender: "Male" },
+                    { id: 5, name: "Mighty Raju", gender: "Male" },
+                    { id: 10, name: "Sally Bollywood", gender: "Female" }
+             ];
+            var cards=<ul class="group">
+                            {
+                                Cartoons.map((c)=>
+                                {
+                                    return <li class="card">
+                                        <h2>{c.id}</h2>
+                                        <h2>{c.name}</h2>
+                                        <h2>{c.gender}</h2> 
+                                    </li>
+
+                                })
+                            }
+                        </ul>
+             ReactDOM.render(cards,document.getElementById("root"))           
+
+    </script>
+</body>
+</html>

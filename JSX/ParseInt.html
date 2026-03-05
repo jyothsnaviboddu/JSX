@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Webapge</title>
+           <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+ 
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+          <div id="root1"></div>
+        <script type="text/babel">
+            var  jsx=<h1>{parseInt(134.56)}</h1>
+             var  js=<h1>{+(134.56)}</h1>
+            ReactDOM.render(jsx,document.getElementById("root"))
+             ReactDOM.render(js,document.getElementById("root1"))
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="r"></div>
+    <script type="text/babel">
+        var todos=["goto arunachalam","Bought new airpodes"]
+        function addtodo(e)
+        {
+            var ntd=document.getElementById("t").value
+            todos.push(ntd)
+            console.log(todos)
+            UI()
+        }
+        function deletetodo(i)
+        {
+            todos.splice(i,1)
+            console.log(todos)
+            UI()
+        }
+        function UI()
+        {
+            var jul=<div>
+                <input type="text" id="t"/>
+                <button onClick={()=>{addtodo()}}>AddTodo</button>
+                <ul>
+                    {
+                        todos.map((a,i)=>
+                        {
+                            return <li>{a}<button onClick={()=>{deletetodo(i)}}>Delete</button></li>
+                                    
+                        })
+                    }
+                </ul>
+                </div>  
+            ReactDOM.render(jul,document.getElementById("r"))
+        }
+        UI()
+    </script>
+    
+</body>
+</html>

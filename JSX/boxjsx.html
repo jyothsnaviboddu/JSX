@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .di{
+            display:flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .box{
+            height: 100px;
+            width:100px;
+            background: linear-gradient(rgb(206, 81, 102), violet);
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="r"></div>
+    <script type="text/babel">
+        var ar=[10,23,45,67]
+        var j=<ul class="di">
+                {
+                    ar.map((a)=>
+                    {
+                            return <li class="box">{a}</li>
+
+                    })
+                }
+                </ul>
+        ReactDOM.render(j,document.getElementById("r"))
+
+
+    </script>
+    
+</body>
+</html>
